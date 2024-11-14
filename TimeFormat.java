@@ -9,21 +9,22 @@ public class TimeFormat {
 		// It concatenates the empty string "" with the leftmost hour-digit. 
 		// It then concatenates the resulting string with the rightmost hour-digit,
 		// and then uses parseInt to cast the resulting string as an int.
-		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
-		// Does the same with the minutes part of the input.
-		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
+		String time = args [0];
+		String Hours = time.substring(0,2);
+		String minutes = time.substring(2,5);
+		int hours = Integer.parseInt(Hours);
 		if (hours<12) {
-			System.out.println(hours +":"+ minutes+" AM");
+			System.out.println(hours + minutes+" AM");
 		}
 		if (hours==24){
-			System.out.println("00" +":"+ minutes+" AM");
+			System.out.println("00" + minutes+" AM");
 		}
 		if (hours>12 && hours!=24) {
 			hours-=12;
-			System.out.println(hours +":"+ minutes+" PM");
+			System.out.println(hours + minutes+" PM");
 		}
 		if (hours==12) {
-			System.out.println(hours +":"+ minutes+" PM");
+			System.out.println(hours + minutes+" PM");
 		}
 	}
 }

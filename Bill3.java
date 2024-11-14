@@ -7,7 +7,7 @@ public class Bill3 {
 		String name3 = args[2];
 		int money = Integer.parseInt(args[3]);
 
-		System.out.println("Dear "+ name1+", "+name2+" and "+name3+": pay " + (int)(money/3.0) +" Shekel each");
+		System.out.println("Dear "+ name3+", "+name2+" and "+name1+": pay " + (int)(money/3.0) +" Shekel each.");
 	
 	}
 }
